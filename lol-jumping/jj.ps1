@@ -1,8 +1,11 @@
 ﻿# 開合跳帳本：英雄聯盟輸一局 = 10 下開合跳
-# 用法（英雄聯盟客戶端要開著）：
-#   .\jj.ps1          同步最近 20 場，記下新的輸場，更新網站用的 fitness\jj.json（不推送）
-#   .\jj.ps1 -Push    同上，再把 jj.json 單獨 commit 並推到 GitHub，彈力帶 app 就看得到
-#   .\jj.ps1 status   只看本機帳本，不連客戶端
+# 用法（英雄聯盟客戶端要開著；這臺電腦的 PowerShell 預設禁止執行腳本，所以前面要加 Bypass）：
+#   powershell -ExecutionPolicy Bypass -File "C:\Claude Code\lol-jumping\jj.ps1"
+#       同步最近 20 場，記下新的輸場，更新網站用的 fitness\jj.json（不推送）
+#   powershell -ExecutionPolicy Bypass -File "C:\Claude Code\lol-jumping\jj.ps1" -Push
+#       同上，再把 jj.json 單獨 commit 並推到 GitHub，彈力帶 app 就看得到
+#   powershell -ExecutionPolicy Bypass -File "C:\Claude Code\lol-jumping\jj.ps1" status
+#       只看本機帳本，不連客戶端
 # 做了幾下開合跳在彈力帶 app 裡記，這裡只算「應做幾下」。
 # lockfile 密碼只在記憶體使用，不印出、不存檔。每場的英雄和 KDA 只存在本機 games.csv，
 # 推上公開 repo 的 jj.json 只有累計數字。
